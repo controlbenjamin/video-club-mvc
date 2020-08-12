@@ -6,6 +6,9 @@
 <h2>Peliculas</h2>
 
 
+<button class="btn btn-primary">@Html.ActionLink("Nueva Película", "Nueva", "Peliculas", null, new { style = "text-decoration:none;color:white;" })</button>
+<br />
+<br />
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -22,7 +25,7 @@
         {
             <tr>
 
-                <td>@Html.ActionLink(peli.Nombre, "Detalles", "Peliculas", new { Id = peli.Id }, null)</td>
+                <td>@Html.ActionLink(peli.Nombre, "Editar", "Peliculas", new { Id = peli.Id }, null)</td>
                 <td>@peli.Genero.Nombre</td>
 
 

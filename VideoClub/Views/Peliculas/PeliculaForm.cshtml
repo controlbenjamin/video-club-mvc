@@ -1,0 +1,49 @@
+﻿@model VideoClub.Models.PeliculasViewModel
+@{
+    ViewBag.Title = "PeliculaForm";
+}
+
+<h2>Nuevo Pelicula</h2>
+
+@using (Html.BeginForm("Guardar", "Peliculas"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.Nombre, "Título:")
+        @Html.TextBoxFor(m => m.Pelicula.Nombre, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.FechaLanzamiento, "Fecha de Lanzamiento:")
+        @Html.TextBoxFor(m => m.Pelicula.FechaLanzamiento, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.FechaAlta, "Fecha de Alta:")
+        @Html.TextBoxFor(m => m.Pelicula.FechaAlta, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.Stock, "Stock:")
+        @Html.TextBoxFor(m => m.Pelicula.Stock, new { @class = "form-control" })
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.GeneroId, "Género:")
+        @Html.DropDownListFor(m => m.Pelicula.GeneroId,
+       new SelectList(Model.Generos, "Id", "Nombre"),
+       "Seleccione Género",
+       new { @class = "form-control" })
+    </div>
+
+ 
+
+
+
+    @Html.HiddenFor(m => m.Pelicula.Id)
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+
+}
+

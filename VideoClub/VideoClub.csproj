@@ -268,6 +268,7 @@
     <Content Include="Views\Clientes\ClienteForm.cshtml" />
     <Content Include="Views\Peliculas\Index.cshtml" />
     <Content Include="Views\Peliculas\Detalles.cshtml" />
+    <Content Include="Views\Peliculas\PeliculaForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

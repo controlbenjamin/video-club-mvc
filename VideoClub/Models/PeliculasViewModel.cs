@@ -12,5 +12,7 @@ namespace VideoClub.Models
         public IEnumerable<Pelicula> Peliculas { get; set; }
 
         public Pelicula Pelicula { get; set; }
+
+        public IEnumerable<Genero> Generos { get; set; }
     }
 }

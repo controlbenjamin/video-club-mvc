@@ -57,6 +57,9 @@ namespace VideoClub.Controllers
         }
 
 
+
+
+
         public ActionResult Nuevo()
         {
 

@@ -27,9 +27,10 @@ namespace VideoClub.Entities
         [Required]
         public int Stock { get; set; }
 
-        public Genero Genero { get; set; }
-
         [Required]
         public int GeneroId { get; set; }
+        public Genero Genero { get; set; }
+
+      
     }
 }
