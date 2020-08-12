@@ -67,6 +67,7 @@ namespace VideoClub.Controllers
 
             var viewModel = new ClientesViewModel()
             {
+                Cliente = new Cliente(),
                 TipoMembresias = tiposDeMembresia
             };
 
@@ -78,6 +79,21 @@ namespace VideoClub.Controllers
         [HttpPost]
         public ActionResult Guardar(Cliente cliente)
         {
+
+
+            if (!ModelState.IsValid)
+            {
+
+
+                var viewModel = new ClientesViewModel() {
+
+                    Cliente = cliente,
+                    TipoMembresias = _context.TipoMembresia.ToList()
+                };
+
+
+                return View("ClienteForm", viewModel);
+            }
 
 
             if (cliente.Id == 0)

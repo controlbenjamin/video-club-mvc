@@ -23,5 +23,8 @@ namespace VideoClub.Entities
 
         public byte TasaDescuento { get; set; }
 
+        public static readonly byte Desconocido = 0;
+        public static readonly byte Prepago = 1;
+
     }
 }

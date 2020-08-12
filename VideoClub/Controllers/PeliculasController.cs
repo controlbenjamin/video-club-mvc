@@ -62,7 +62,7 @@ namespace VideoClub.Controllers
 
             var viewModel = new PeliculasViewModel()
             {
-               Generos = generos
+                Generos = generos
             };
 
 
@@ -74,6 +74,21 @@ namespace VideoClub.Controllers
         public ActionResult Guardar(Pelicula pelicula)
         {
 
+
+            if (!ModelState.IsValid)
+            {
+
+
+                var viewModel = new PeliculasViewModel()
+                {
+
+                    Pelicula = pelicula,
+                    Generos = _context.Generos.ToList()
+                };
+
+
+                return View("PeliculaForm", viewModel);
+            }
 
             if (pelicula.Id == 0)
             {
@@ -92,16 +107,9 @@ namespace VideoClub.Controllers
 
             }
 
-            try
-            {
-                _context.SaveChanges();
-            }
-            catch (DbEntityValidationException e)
-            {
-                Console.WriteLine(e);
-            }
+            _context.SaveChanges();
 
-            
+
 
             return RedirectToAction("Index");
         }
