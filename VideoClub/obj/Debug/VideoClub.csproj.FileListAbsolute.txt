@@ -108,3 +108,6 @@ D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.dll
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.pdb
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.ModeloInicial.resources
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csproj.GenerateResource.cache
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.InsertarRegistrosTablaGeneros.resources
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.InsertarRegistrosTablaTipoMembresia.resources
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.AgregarRegistroPruebaTablaClientes_TablaPeliculas.resources

@@ -1,0 +1,39 @@
+﻿@model VideoClub.Models.PeliculasViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Peliculas</h2>
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+
+            <th scope="col">Titulo</th>
+            <th scope="col">Género</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var peli in Model.Peliculas)
+        {
+            <tr>
+
+                <td>@Html.ActionLink(peli.Nombre, "Detalles", "Peliculas", new { Id = peli.Id }, null)</td>
+                <td>@peli.Genero.Nombre</td>
+
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+
+
+

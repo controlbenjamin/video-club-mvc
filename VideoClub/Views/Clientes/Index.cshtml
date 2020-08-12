@@ -1,0 +1,38 @@
+﻿@model VideoClub.Models.ClientesViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Clientes</h2>
+
+<button class="btn btn-primary">@Html.ActionLink("Nuevo", "Nuevo", "Clientes", null, new { style = "text-decoration:none;color:white;" })</button>
+<br /><br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo de Membresía</th>
+            <th scope="col">Tasa de Descuento</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var cliente in Model.Clientes)
+        {
+            <tr>
+
+                <td>@Html.ActionLink(cliente.Nombre, "Detalles", "Clientes", new { Id = cliente.Id }, null)</td>
+                <td>@cliente.TipoMembresia.Nombre</td>
+                <td>@cliente.TipoMembresia.TasaDescuento %</td>
+
+
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>

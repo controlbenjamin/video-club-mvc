@@ -1,0 +1,15 @@
+﻿@model VideoClub.Models.PeliculasViewModel
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>@Model.Pelicula.Nombre</h2>
+
+<ul>
+
+    <li>Genero: @Model.Pelicula.Genero.Nombre</li>
+    <li>Fecha de Lanzamiento: @Model.Pelicula.FechaLanzamiento.ToLongDateString()</li>
+    <li>Fecha de Alta: @Model.Pelicula.FechaAlta.ToShortDateString()</li>
+    <li>Stock: @Model.Pelicula.Stock</li>
+</ul>
+

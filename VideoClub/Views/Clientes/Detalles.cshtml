@@ -1,0 +1,16 @@
+﻿@model VideoClub.Models.ClientesViewModel
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>@Model.Cliente.Nombre</h2>
+
+<ul>
+    <li>Tipo de Membresía: @Model.Cliente.TipoMembresia.Nombre</li>
+    @if (@Model.Cliente.FechaNacimiento != null)
+    {
+        <li>Fecha de Nacimiento: @Model.Cliente.FechaNacimiento.Value.ToShortDateString() </li>
+    }
+</ul>
+
+
