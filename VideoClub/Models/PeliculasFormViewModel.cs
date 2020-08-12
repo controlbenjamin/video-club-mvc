@@ -7,23 +7,8 @@ using VideoClub.Entities;
 
 namespace VideoClub.Models
 {
-    public class PeliculasViewModel
+    public class PeliculasFormViewModel
     {
-
-        public PeliculasViewModel()
-        {
-            Id = 0;
-        }
-
-        public PeliculasViewModel(Pelicula pelicula)
-        {
-            Id = pelicula.Id;
-            Nombre = pelicula.Nombre;
-            FechaLanzamiento = pelicula.FechaLanzamiento;
-            Stock = pelicula.Stock;
-            GeneroId = pelicula.GeneroId;
-        }
-
 
         public Pelicula Pelicula { get; set; }
 
@@ -59,10 +44,5 @@ namespace VideoClub.Models
 
             }
         }
-        public IEnumerable<Pelicula> Peliculas { get; set; }
-
-
-
-
     }
 }

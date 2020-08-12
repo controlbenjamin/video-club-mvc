@@ -201,6 +201,7 @@
     <Compile Include="Entities\IdentityModels.cs" />
     <Compile Include="Models\ClientesViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PeliculasFormViewModel.cs" />
     <Compile Include="Models\PeliculasViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

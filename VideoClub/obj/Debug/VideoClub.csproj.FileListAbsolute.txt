@@ -1,4 +1,3 @@
-D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csprojAssemblyReference.cache
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csproj.CoreCompileInputs.cache
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\VideoClub.dll.config
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\VideoClub.dll

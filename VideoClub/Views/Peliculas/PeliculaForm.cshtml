@@ -7,45 +7,53 @@
 
 @using (Html.BeginForm("Guardar", "Peliculas"))
 {
+    @Html.ValidationSummary(true, "Por favor corrija los siguientes errores:")
+
     <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.Nombre, "Título:")
-        @Html.TextBoxFor(m => m.Pelicula.Nombre, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Pelicula.Nombre)
+        @Html.LabelFor(m => m.Nombre, "Título:")
+        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nombre)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.FechaLanzamiento, "Fecha de Lanzamiento:")
-        @Html.TextBoxFor(m => m.Pelicula.FechaLanzamiento, "{0:dd/MM/yyyy}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Pelicula.FechaLanzamiento)
+        @Html.LabelFor(m => m.FechaLanzamiento, "Fecha de Lanzamiento:")
+        @Html.TextBoxFor(m => m.FechaLanzamiento, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FechaLanzamiento)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.FechaAlta, "Fecha de Alta:")
-        @Html.TextBoxFor(m => m.Pelicula.FechaAlta, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+        @Html.LabelFor(m => m.FechaAlta, "Fecha de Alta:")
+        @Html.TextBoxFor(m => m.FechaAlta, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FechaAlta)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.Stock, "Stock:")
-        @Html.TextBoxFor(m => m.Pelicula.Stock, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Stock, "Stock:")
+        @Html.TextBoxFor(m => m.Stock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Stock)
     </div>
 
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.GeneroId, "Género:")
-        @Html.DropDownListFor(m => m.Pelicula.GeneroId,
+        @Html.LabelFor(m => m.GeneroId, "Género:")
+        @Html.DropDownListFor(m => m.GeneroId,
        new SelectList(Model.Generos, "Id", "Nombre"),
        "Seleccione Género",
        new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.GeneroId)
     </div>
 
 
 
 
 
-    @Html.HiddenFor(m => m.Pelicula.Id)
-
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Guardar</button>
 
 
 }
 
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

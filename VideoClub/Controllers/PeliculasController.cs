@@ -71,6 +71,7 @@ namespace VideoClub.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Guardar(Pelicula pelicula)
         {
 
@@ -79,10 +80,9 @@ namespace VideoClub.Controllers
             {
 
 
-                var viewModel = new PeliculasViewModel()
+                var viewModel = new PeliculasViewModel(pelicula)
                 {
-
-                    Pelicula = pelicula,
+                   
                     Generos = _context.Generos.ToList()
                 };
 
@@ -126,10 +126,9 @@ namespace VideoClub.Controllers
             }
 
 
-            var viewModel = new PeliculasViewModel()
+            var viewModel = new PeliculasViewModel(pelicula)
             {
-
-                Pelicula = pelicula,
+               
                 Generos = _context.Generos.ToList()
             };
 

@@ -77,6 +77,7 @@ namespace VideoClub.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Guardar(Cliente cliente)
         {
 

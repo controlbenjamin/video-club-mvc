@@ -42,9 +42,12 @@
 
 
     @Html.HiddenFor(m => m.Cliente.Id)
-
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Guardar</button>
 
 
 }
 
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -25,12 +25,13 @@ namespace VideoClub.Entities
         public DateTime FechaAlta { get; set; }
 
         [Required]
+        [Range(1, 20)]
         public int Stock { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Debe seleccionar un género")]
         public int GeneroId { get; set; }
         public Genero Genero { get; set; }
 
-      
+
     }
 }
