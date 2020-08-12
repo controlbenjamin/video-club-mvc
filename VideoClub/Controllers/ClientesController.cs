@@ -68,7 +68,56 @@ namespace VideoClub.Controllers
             };
 
 
-            return View(viewModel);
+            return View("ClienteForm", viewModel);
+        }
+
+
+        [HttpPost]
+        public ActionResult Guardar(Cliente cliente)
+        {
+
+
+            if (cliente.Id == 0)
+            {
+                _context.Clientes.Add(cliente);
+            }
+            else
+            {
+
+                var clienteDb = _context.Clientes.Single(c => c.Id == cliente.Id);
+
+                clienteDb.Nombre = cliente.Nombre;
+                clienteDb.FechaNacimiento = cliente.FechaNacimiento;
+                clienteDb.TipoMembresiaId = cliente.TipoMembresiaId;
+                clienteDb.EstaSuscritoNoticias = cliente.EstaSuscritoNoticias;
+            }
+
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+
+        public ActionResult Editar(int id)
+        {
+
+            var cliente = _context.Clientes.SingleOrDefault(c => c.Id == id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+
+
+            var viewModel = new ClientesViewModel()
+            {
+
+                Cliente = cliente,
+                TipoMembresias = _context.TipoMembresia.ToList()
+            };
+
+            return View("ClienteForm", viewModel);
         }
 
 

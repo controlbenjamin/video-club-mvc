@@ -265,7 +265,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
     <Content Include="Views\Clientes\Detalles.cshtml" />
-    <Content Include="Views\Clientes\Nuevo.cshtml" />
+    <Content Include="Views\Clientes\ClienteForm.cshtml" />
     <Content Include="Views\Peliculas\Index.cshtml" />
     <Content Include="Views\Peliculas\Detalles.cshtml" />
   </ItemGroup>

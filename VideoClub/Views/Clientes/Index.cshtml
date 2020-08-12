@@ -24,7 +24,7 @@
         {
             <tr>
 
-                <td>@Html.ActionLink(cliente.Nombre, "Detalles", "Clientes", new { Id = cliente.Id }, null)</td>
+                <td>@Html.ActionLink(cliente.Nombre, "Editar", "Clientes", new { Id = cliente.Id }, null)</td>
                 <td>@cliente.TipoMembresia.Nombre</td>
                 <td>@cliente.TipoMembresia.TasaDescuento %</td>
 
