@@ -110,3 +110,12 @@ D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csproj.GenerateReso
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.InsertarRegistrosTablaGeneros.resources
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.InsertarRegistrosTablaTipoMembresia.resources
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.AgregarRegistroPruebaTablaClientes_TablaPeliculas.resources
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Net.Http.Formatting.dll
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Web.Http.dll
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Web.Http.WebHost.dll
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Net.Http.Formatting.xml
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Web.Http.xml
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Web.Http.WebHost.xml
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csprojAssemblyReference.cache
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\AutoMapper.dll
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\AutoMapper.xml
