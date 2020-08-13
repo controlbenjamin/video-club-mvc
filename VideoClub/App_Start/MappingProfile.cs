@@ -15,13 +15,13 @@ namespace VideoClub.App_Start
         {
          
             Mapper.CreateMap<ClienteDTO, Cliente>();
-            Mapper.CreateMap<Cliente, ClienteDTO>();
-                // .ForMember(c => c.Id, opt => opt.Ignore()); ;
+            Mapper.CreateMap<Cliente, ClienteDTO>()
+                 .ForMember(c => c.Id, opt => opt.Ignore()); ;
 
 
             Mapper.CreateMap<PeliculaDTO, Pelicula>();
-            Mapper.CreateMap<Pelicula, PeliculaDTO>();
-             //   .ForMember(p => p.Id, opt => opt.Ignore());
+            Mapper.CreateMap<Pelicula, PeliculaDTO>()
+                .ForMember(p => p.Id, opt => opt.Ignore());
         }
     }
 }
