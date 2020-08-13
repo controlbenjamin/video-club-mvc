@@ -44,20 +44,22 @@
     <script>
         $(document).ready(function () {
             $("#clientes .js-eliminar").on("click", function () {
-                if (confirm("¿Está seguro de eliminar a este cliente?")) {
-                    var boton = $(this);
-                   
-                    $.ajax({
-                        url: "/api/clientes/" + boton.attr("data-cliente-id"),
-                        method: "DELETE",
-                        success: function () {
-                            boton.parents("tr").remove();
-                        }
+                var boton = $(this);
 
-                    });
-                }
+                bootbox.confirm("¿Está seguro de eliminar a este cliente?", function (result) {
+                    if (result) {
 
+                        $.ajax({
+                            url: "/api/clientes/" + boton.attr("data-cliente-id"),
+                            method: "DELETE",
+                            success: function () {
+                                boton.parents("tr").remove();
+                            }
 
+                        });
+
+                    }
+                });
 
 
             });
