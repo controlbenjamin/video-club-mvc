@@ -6,15 +6,17 @@
 <h2>Clientes</h2>
 
 <button class="btn btn-primary">@Html.ActionLink("Nuevo CLiente", "Nuevo", "Clientes", null, new { style = "text-decoration:none;color:white;" })</button>
-<br /><br />
+<br />
+<br />
 
-<table class="table table-bordered table-hover">
+<table id="clientes" class="table table-bordered table-hover">
     <thead>
         <tr>
 
             <th scope="col">Nombre</th>
             <th scope="col">Tipo de Membresía</th>
             <th scope="col">Tasa de Descuento</th>
+            <th scope="col">Eliminar</th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +30,7 @@
                 <td>@cliente.TipoMembresia.Nombre</td>
                 <td>@cliente.TipoMembresia.TasaDescuento %</td>
 
-
+                <td> <button data-cliente-id="@cliente.Id" class="btn btn-link js-eliminar">Eliminar</button>  </td>
 
             </tr>
         }
@@ -36,3 +38,33 @@
 
     </tbody>
 </table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#clientes .js-eliminar").on("click", function () {
+                if (confirm("¿Está seguro de eliminar a este cliente?")) {
+                    var boton = $(this);
+                   
+                    $.ajax({
+                        url: "/api/clientes/" + boton.attr("data-cliente-id"),
+                        method: "DELETE",
+                        success: function () {
+                            boton.parents("tr").remove();
+                        }
+
+                    });
+                }
+
+
+
+
+            });
+
+        });
+
+    </script>
+
+
+}
