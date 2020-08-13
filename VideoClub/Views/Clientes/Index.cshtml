@@ -43,7 +43,7 @@
 {
     <script>
         $(document).ready(function () {
-            $("#clientes .js-eliminar").on("click", function () {
+            $("#clientes").on("click",".js-eliminar",  function () {
                 var boton = $(this);
 
                 bootbox.confirm("¿Está seguro de eliminar a este cliente?", function (result) {
