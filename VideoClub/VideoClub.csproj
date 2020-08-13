@@ -189,6 +189,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PeliculasController.cs" />
     <Compile Include="DTOs\ClienteDTO.cs" />
+    <Compile Include="DTOs\PeliculaDTO.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Genero.cs" />
     <Compile Include="Entities\Pelicula.cs" />
