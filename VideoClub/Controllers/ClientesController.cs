@@ -41,15 +41,15 @@ namespace VideoClub.Controllers
             return View(viewModel);
 
             */
-            if (MemoryCache.Default["Generos"] == null)
-            {
-                MemoryCache.Default["Generos"] = _context.Generos.ToList();
-            }
+            //if (MemoryCache.Default["Generos"] == null)
+            //{
+            //    MemoryCache.Default["Generos"] = _context.Generos.ToList();
+            //}
 
-            List<Genero> generos = MemoryCache.Default["Generos"] as List<Genero>;
+            //List<Genero> generos = MemoryCache.Default["Generos"] as List<Genero>;
 
 
-            return View("GenerosGay");
+            return View();
         }
 
 
