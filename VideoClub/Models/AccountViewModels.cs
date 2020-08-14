@@ -8,6 +8,10 @@ namespace VideoClub.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Licencia de conducir")]
+        public string LicenciaConducir { get; set; }
     }
 
     public class ExternalLoginListViewModel

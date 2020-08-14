@@ -55,9 +55,9 @@ namespace VideoClub
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "595134941150153",
+               appSecret: "4bfba2df2360dad66e9d07d47113eee8");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

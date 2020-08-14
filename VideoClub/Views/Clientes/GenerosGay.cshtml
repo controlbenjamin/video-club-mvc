@@ -1,0 +1,11 @@
+﻿@model List<VideoClub.Entities.Genero>
+@{
+    ViewBag.Title = "GenerosGay";
+}
+
+<h2>GenerosGay</h2>
+
+@foreach (var item in (List<VideoClub.Entities.Genero>)Model)
+{
+    <span> @item.Nombre</span>
+}

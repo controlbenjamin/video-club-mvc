@@ -8,6 +8,8 @@ using VideoClub.Entities;
 using System.Data.Entity;
 using VideoClub.Models;
 
+using System.Runtime.Caching;
+
 namespace VideoClub.Controllers
 {
    // [Authorize]
@@ -39,8 +41,15 @@ namespace VideoClub.Controllers
             return View(viewModel);
 
             */
+            if (MemoryCache.Default["Generos"] == null)
+            {
+                MemoryCache.Default["Generos"] = _context.Generos.ToList();
+            }
 
-            return View();
+            List<Genero> generos = MemoryCache.Default["Generos"] as List<Genero>;
+
+
+            return View("GenerosGay");
         }
 
 
