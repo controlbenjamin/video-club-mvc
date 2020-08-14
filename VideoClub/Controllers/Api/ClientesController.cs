@@ -11,6 +11,7 @@ using System.Web.Mvc;
 using VideoClub.DTOs;
 using VideoClub.Entities;
 
+using System.Data.Entity;
 
 
 namespace VideoClub.Controllers.Api
@@ -34,7 +35,10 @@ namespace VideoClub.Controllers.Api
         [System.Web.Http.HttpGet]
         public IEnumerable<ClienteDTO> GetClientes()
         {
-            return _context.Clientes.ToList().Select(Mapper.Map<Cliente, ClienteDTO>);
+            return _context.Clientes
+                .Include(c => c.TipoMembresia)
+                .ToList()
+                .Select(Mapper.Map<Cliente, ClienteDTO>);
         }
 
 

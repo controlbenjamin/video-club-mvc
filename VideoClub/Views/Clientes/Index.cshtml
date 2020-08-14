@@ -5,6 +5,7 @@
 
 <h2>Clientes</h2>
 
+
 <button class="btn btn-primary">@Html.ActionLink("Nuevo CLiente", "Nuevo", "Clientes", null, new { style = "text-decoration:none;color:white;" })</button>
 <br />
 <br />
@@ -14,15 +15,14 @@
         <tr>
 
             <th scope="col">Nombre</th>
-            <th scope="col">Tipo de Membresía</th>
-            <th scope="col">Tasa de Descuento</th>
+            <th scope="col">Tipo de Membresía</th> 
             <th scope="col">Eliminar</th>
         </tr>
     </thead>
     <tbody>
 
 
-        @foreach (var cliente in Model.Clientes)
+        @*@foreach (var cliente in Model.Clientes)
         {
             <tr>
 
@@ -33,7 +33,7 @@
                 <td> <button data-cliente-id="@cliente.Id" class="btn btn-link js-eliminar">Eliminar</button>  </td>
 
             </tr>
-        }
+        }*@
 
 
     </tbody>
@@ -43,9 +43,32 @@
 {
     <script>
         $(document).ready(function () {
-            $("#clientes").DataTable();
+            var table = $("#clientes").DataTable({
+                ajax: {
+                    url: "/api/clientes",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "nombre",
+                        render: function (data, type, cliente) {
+                            return "<a href='/clientes/editar/" + cliente.id + "'>" + cliente.nombre + "</a>";
+                        }
+                    },
+                    {
+                        data: "tipoMembresia.nombre"
+                       
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-eliminar' data-cliente-id=" + data + ">Eliminar</button>";
+                        }
+                    }
+                ]
+            });
 
-            $("#clientes").on("click",".js-eliminar",  function () {
+            $("#clientes").on("click", ".js-eliminar", function () {
                 var boton = $(this);
 
                 bootbox.confirm("¿Está seguro de eliminar a este cliente?", function (result) {
@@ -55,7 +78,9 @@
                             url: "/api/clientes/" + boton.attr("data-cliente-id"),
                             method: "DELETE",
                             success: function () {
-                                boton.parents("tr").remove();
+
+                                table.row(boton.parents("tr")).remove().draw();
+                              
                             }
 
                         });

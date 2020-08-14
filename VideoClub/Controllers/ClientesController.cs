@@ -27,6 +27,7 @@ namespace VideoClub.Controllers
 
         public ActionResult Index()
         {
+            /*
             var clientes = _context.Clientes.Include(c => c.TipoMembresia).ToList();
 
             var viewModel = new ClientesViewModel()
@@ -35,6 +36,10 @@ namespace VideoClub.Controllers
             };
 
             return View(viewModel);
+
+            */
+
+            return View();
         }
 
 

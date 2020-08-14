@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using VideoClub.Entities;
 using VideoClub.Validaciones;
 
 namespace VideoClub.DTOs
@@ -17,14 +18,14 @@ namespace VideoClub.DTOs
 
         public bool EstaSuscritoNoticias { get; set; }
 
-        
+        public TipoMembresiaDTO TipoMembresia { get; set; }
 
-      
+
         public int TipoMembresiaId { get; set; }
 
 
-    
-      //  [ValidacionMayorEdad18]
+
+        //  [ValidacionMayorEdad18]
         public DateTime? FechaNacimiento { get; set; }
     }
 }
