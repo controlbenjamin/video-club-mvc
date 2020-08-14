@@ -64,6 +64,11 @@ namespace VideoClub.Models
 
     public class RegisterViewModel
     {
+
+        [Required]
+        [Display(Name = "Licencia de conducir")]
+        public string LicenciaConducir { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

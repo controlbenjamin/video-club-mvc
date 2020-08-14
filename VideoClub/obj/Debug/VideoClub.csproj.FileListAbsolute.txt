@@ -120,3 +120,4 @@ D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csprojAssemblyRefer
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\AutoMapper.dll
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\AutoMapper.xml
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.ClasificarUsuarios.resources
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.AgregarLicenciaConducirToApplicationUser.resources
