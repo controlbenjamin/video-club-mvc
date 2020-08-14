@@ -10,6 +10,7 @@ using VideoClub.Models;
 
 namespace VideoClub.Controllers
 {
+   // [Authorize]
     public class ClientesController : Controller
     {
 
@@ -24,7 +25,7 @@ namespace VideoClub.Controllers
         {
             _context.Dispose();
         }
-
+      
         public ActionResult Index()
         {
             /*

@@ -36,7 +36,13 @@ namespace VideoClub.Controllers
                 Peliculas = peliculas
             };
 
-            return View(viewModel);
+
+            if (User.IsInRole(RolNombre.PuedeAdministrarPeliculas))
+            {
+                return View("Index", viewModel);
+            }
+
+            return View("IndexSoloLectura", viewModel);
         }
 
 
@@ -54,7 +60,7 @@ namespace VideoClub.Controllers
             return View(viewModel);
         }
 
-
+        [Authorize(Roles = RolNombre.PuedeAdministrarPeliculas)]
         public ActionResult Nueva()
         {
 

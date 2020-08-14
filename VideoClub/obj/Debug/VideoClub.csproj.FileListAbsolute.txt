@@ -119,3 +119,4 @@ D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Web.Http.WebHost.xml
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.csprojAssemblyReference.cache
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\AutoMapper.dll
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\AutoMapper.xml
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.ClasificarUsuarios.resources

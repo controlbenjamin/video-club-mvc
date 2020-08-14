@@ -215,6 +215,10 @@
     <Compile Include="Migrations\202008121357251_AgregarRegistroPruebaTablaClientes_TablaPeliculas.Designer.cs">
       <DependentUpon>202008121357251_AgregarRegistroPruebaTablaClientes_TablaPeliculas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008141332280_ClasificarUsuarios.cs" />
+    <Compile Include="Migrations\202008141332280_ClasificarUsuarios.Designer.cs">
+      <DependentUpon>202008141332280_ClasificarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Entities\IdentityModels.cs" />
@@ -222,6 +226,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PeliculasFormViewModel.cs" />
     <Compile Include="Models\PeliculasViewModel.cs" />
+    <Compile Include="Models\RolNombre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Validaciones\ValidacionMayorEdad18.cs" />
@@ -468,6 +473,7 @@
     <Content Include="Views\Peliculas\Index.cshtml" />
     <Content Include="Views\Peliculas\Detalles.cshtml" />
     <Content Include="Views\Peliculas\PeliculaForm.cshtml" />
+    <Content Include="Views\Peliculas\IndexSoloLectura.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,6 +503,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008121357251_AgregarRegistroPruebaTablaClientes_TablaPeliculas.resx">
       <DependentUpon>202008121357251_AgregarRegistroPruebaTablaClientes_TablaPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008141332280_ClasificarUsuarios.resx">
+      <DependentUpon>202008141332280_ClasificarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
