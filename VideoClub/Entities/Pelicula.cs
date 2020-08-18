@@ -28,6 +28,9 @@ namespace VideoClub.Entities
         [Range(1, 20)]
         public int Stock { get; set; }
 
+        [Required]
+        public int CantidadDisponible { get; set; }
+
         [Required(ErrorMessage = "Debe seleccionar un género")]
         public int GeneroId { get; set; }
         public Genero Genero { get; set; }

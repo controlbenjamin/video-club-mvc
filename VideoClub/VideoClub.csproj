@@ -232,6 +232,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlquileresController.cs" />
+    <Compile Include="Controllers\Api\AlquileresController.cs" />
     <Compile Include="Controllers\Api\ClientesController.cs" />
     <Compile Include="Controllers\Api\PeliculasController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
@@ -239,8 +241,10 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PeliculasController.cs" />
     <Compile Include="DTOs\ClienteDTO.cs" />
+    <Compile Include="DTOs\NuevoAlquilerDto.cs" />
     <Compile Include="DTOs\PeliculaDTO.cs" />
     <Compile Include="DTOs\TipoMembresiaDTO.cs" />
+    <Compile Include="Entities\Alquiler.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Genero.cs" />
     <Compile Include="Entities\Pelicula.cs" />
@@ -274,6 +278,14 @@
     <Compile Include="Migrations\202008141713542_AgregarLicenciaConducirToApplicationUser.Designer.cs">
       <DependentUpon>202008141713542_AgregarLicenciaConducirToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008181258442_CrearTablaAlquileres.cs" />
+    <Compile Include="Migrations\202008181258442_CrearTablaAlquileres.Designer.cs">
+      <DependentUpon>202008181258442_CrearTablaAlquileres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008181330504_AgregarColumnaCantidadDisponibleToTablaPeliculas.cs" />
+    <Compile Include="Migrations\202008181330504_AgregarColumnaCantidadDisponibleToTablaPeliculas.Designer.cs">
+      <DependentUpon>202008181330504_AgregarColumnaCantidadDisponibleToTablaPeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
@@ -287,6 +299,9 @@
     <Compile Include="Validaciones\ValidacionMayorEdad18.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\alertify\alertify.bootstrap.css" />
+    <Content Include="Content\alertify\alertify.core.css" />
+    <Content Include="Content\alertify\alertify.default.css" />
     <Content Include="Content\bootstrap-cyborg.css" />
     <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap-lumen.css" />
@@ -402,16 +417,25 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\alertify\alertify.js" />
+    <Content Include="Scripts\alertify\alertify.min.js" />
+    <Content Include="Scripts\bloodhound.js" />
+    <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -487,6 +511,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -530,6 +560,7 @@
     <Content Include="Views\Peliculas\PeliculaForm.cshtml" />
     <Content Include="Views\Peliculas\IndexSoloLectura.cshtml" />
     <Content Include="Views\Clientes\GenerosGay.cshtml" />
+    <Content Include="Views\Alquileres\Nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -565,6 +596,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008141713542_AgregarLicenciaConducirToApplicationUser.resx">
       <DependentUpon>202008141713542_AgregarLicenciaConducirToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008181258442_CrearTablaAlquileres.resx">
+      <DependentUpon>202008181258442_CrearTablaAlquileres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008181330504_AgregarColumnaCantidadDisponibleToTablaPeliculas.resx">
+      <DependentUpon>202008181330504_AgregarColumnaCantidadDisponibleToTablaPeliculas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

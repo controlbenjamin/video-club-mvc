@@ -33,12 +33,21 @@ namespace VideoClub.Controllers.Api
 
         //GET => api/clientes
         [System.Web.Http.HttpGet]
-        public IEnumerable<ClienteDTO> GetClientes()
+        public IHttpActionResult GetClientes(string query = null)
         {
-            return _context.Clientes
-                .Include(c => c.TipoMembresia)
+            var clientesQuery = _context.Clientes
+                .Include(c => c.TipoMembresia);
+
+            if (!String.IsNullOrWhiteSpace(query))
+            {
+                clientesQuery = clientesQuery.Where(c => c.Nombre.Contains(query));
+            }
+
+            var clientesDtos = clientesQuery
                 .ToList()
                 .Select(Mapper.Map<Cliente, ClienteDTO>);
+
+            return Ok(clientesDtos);
         }
 
 

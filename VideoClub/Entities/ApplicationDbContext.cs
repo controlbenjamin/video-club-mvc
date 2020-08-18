@@ -29,6 +29,7 @@ namespace VideoClub.Entities
 
         public DbSet<Genero> Generos { get; set; }
 
+        public DbSet<Alquiler> Alquileres { get; set; }
 
 
 

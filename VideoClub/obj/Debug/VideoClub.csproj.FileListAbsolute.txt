@@ -147,3 +147,5 @@ D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Buffers.xml
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Memory.xml
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Numerics.Vectors.xml
 D:\MoshHamedani\MVC5\VideoClub\VideoClub\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.CrearTablaAlquileres.resources
+D:\MoshHamedani\MVC5\VideoClub\VideoClub\obj\Debug\VideoClub.Migrations.AgregarColumnaCantidadDisponibleToTablaPeliculas.resources

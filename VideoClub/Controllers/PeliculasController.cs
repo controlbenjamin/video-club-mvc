@@ -11,6 +11,7 @@ using System.Data.Entity.Validation;
 
 namespace VideoClub.Controllers
 {
+    [AllowAnonymous]
     public class PeliculasController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -140,5 +141,8 @@ namespace VideoClub.Controllers
 
             return View("PeliculaForm", viewModel);
         }
+
+
+        
     }
 }
